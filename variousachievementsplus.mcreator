@@ -1,0 +1,432 @@
+{
+  "id_map": {},
+  "mod_elements": [
+    {
+      "name": "Start",
+      "type": "achievement",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "WtfYouDoing",
+      "type": "achievement",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "KillOnPeasiful",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BackIntroNether",
+      "type": "achievement",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BackIntroNormalWorld",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Logo",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "PropLogicAdvanc",
+      "type": "achievement",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Alone",
+      "type": "achievement",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "TIMETOGRIFFING",
+      "type": "achievement",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Stonks",
+      "type": "achievement",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "NowIGod",
+      "type": "achievement",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "JustInCase",
+      "type": "achievement",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BasisOfMechanic",
+      "type": "achievement",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BreakMeCompletely",
+      "type": "achievement",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogicBreakMeCompletly",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RegularSuicide",
+      "type": "achievement",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogicAlone",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerJoinDo",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogicNowImGod",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "command",
+            "type": "string"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogicFirst",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Boom",
+      "type": "achievement",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AndNoPractice",
+      "type": "achievement",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "ArtObject",
+      "type": "achievement",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "BoomLogic",
+      "type": "procedure",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerScorer",
+      "type": "procedure",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PlayerDeScorer",
+      "type": "procedure",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RestoringAchivements",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "scorePlayers",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "vapStatus",
+      "type": "logic",
+      "scope": "world",
+      "value": "false"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "ru_ru": {
+      "advancements.timetogriffing.title": "ВРЕМЯ ГРИФФЕРСТВА!",
+      "advancements.artobject.descr": "Создай шедевр",
+      "advancements.alone.descr": "Отправь 100 сообщений в одиночном режиме",
+      "advancements.regularsuicide.title": "Постоянный суецидник",
+      "advancements.proplogicadvanc.title": "Various Achievements +",
+      "advancements.basisofmechanic.descr": "Создай поршень",
+      "advancements.backintronether.title": "Дом, милый дом!",
+      "advancements.artobject.title": "Арт объект",
+      "advancements.andnopractice.descr": "Найди пузырёк опыта",
+      "advancements.boom.title": "Буум!",
+      "advancements.proplogicadvanc.descr": "Various Achivenent но как мод",
+      "advancements.timetogriffing.descr": "Сделай TNT",
+      "advancements.nowigod.descr": "Смени режим игры на Творческий",
+      "advancements.basisofmechanic.title": "Основа механизма",
+      "advancements.boom.descr": "Подорви что-нибудь",
+      "item.logo.name": "Various Achievements +",
+      "advancements.alone.title": "Наедине с собой",
+      "advancements.andnopractice.title": "...и никакой практики!",
+      "advancements.stonks.title": "Stonks",
+      "advancements.nowigod.title": "Теперь Я тут Босс",
+      "advancements.breakmecompletely.descr": "Ваша первая смерть",
+      "advancements.wtfyoudoing.title": "Убийца",
+      "advancements.backintronether.descr": "Вернитесь в нормальный мир",
+      "advancements.wtfyoudoing.descr": "Убейте любого моба на мирном уровне сложности",
+      "advancements.start.title": "Я здесь!",
+      "advancements.start.descr": "Напишите что-нибудь в чат",
+      "advancements.breakmecompletely.title": "Ломай меня полностью!",
+      "advancements.justincase.descr": "Сделай 64 палочки",
+      "advancements.regularsuicide.descr": "Умри 100 раз",
+      "advancements.stonks.descr": "Получи 64 эмеральдовых блоков",
+      "advancements.justincase.title": "На всякий случай"
+    },
+    "en_us": {
+      "advancements.timetogriffing.title": "TIME TO GRIFFING!",
+      "advancements.artobject.descr": "Get Painting",
+      "advancements.alone.descr": "Sand 100 messages",
+      "advancements.proplogicadvanc.title": "Various Achivenent +",
+      "advancements.regularsuicide.title": "Regular Suicide",
+      "advancements.basisofmechanic.descr": "Get Piston",
+      "advancements.backintronether.title": "Home, Lovely home!",
+      "advancements.artobject.title": "Art Object",
+      "advancements.andnopractice.descr": "Get XP bottle",
+      "advancements.boom.title": "Boom!",
+      "advancements.proplogicadvanc.descr": "Various Achivenent, but it\u0027s Mod",
+      "advancements.timetogriffing.descr": "Get TNT",
+      "advancements.nowigod.descr": "Change Gamemode",
+      "advancements.basisofmechanic.title": "Basic of Mechanic",
+      "advancements.boom.descr": "Blow up something",
+      "item.logo.name": "Various Achievements +",
+      "advancements.alone.title": "Alone chatting",
+      "advancements.andnopractice.title": "...and no practice!",
+      "advancements.stonks.title": "Stonks",
+      "advancements.nowigod.title": "Now I\u0027m God",
+      "advancements.breakmecompletely.descr": "You first death",
+      "advancements.wtfyoudoing.title": "Killer",
+      "advancements.backintronether.descr": "Back to Surface",
+      "advancements.wtfyoudoing.descr": "Kill any Mob on Peasiful difficulty",
+      "advancements.start.title": "I\u0027m here!",
+      "advancements.start.descr": "Write something to chat.",
+      "advancements.breakmecompletely.title": "Break me completely",
+      "advancements.justincase.descr": "Get 64 sticks",
+      "advancements.regularsuicide.descr": "Death 100 times",
+      "advancements.stonks.descr": "Get 1 stack Emerald Block",
+      "advancements.justincase.title": "Just in case (not work)"
+    }
+  },
+  "workspaceSettings": {
+    "modid": "variousachievementsplus",
+    "modName": "Various Achievements +",
+    "version": "0.0.1",
+    "description": "Need more achievements? This mod is for you!",
+    "author": "Krasi_Bea",
+    "websiteURL": "https://sites.google.com/view/krasi-bea/minecraft",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "logo",
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "1.12.2",
+    "credits": "I\u0027m NIKOLAY :)",
+    "modElementsPackage": "variousachievementsplus",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202000214217
+}

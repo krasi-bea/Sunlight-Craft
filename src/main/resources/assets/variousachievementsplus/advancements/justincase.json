@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:blaze_rod"
+    },
+    "title": {
+      "translate": "advancements.justincase.title"
+    },
+    "description": {
+      "translate": "advancements.justincase.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "justincase": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:stick",
+            "count": {
+              "min": 64,
+              "max": 9999999
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "variousachievementsplus:proplogicadvanc"
+}

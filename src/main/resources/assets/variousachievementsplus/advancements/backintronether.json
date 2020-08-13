@@ -1,0 +1,26 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:grass"
+    },
+    "title": {
+      "translate": "advancements.backintronether.title"
+    },
+    "description": {
+      "translate": "advancements.backintronether.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "backintronether": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "variousachievementsplus:proplogicadvanc"
+}

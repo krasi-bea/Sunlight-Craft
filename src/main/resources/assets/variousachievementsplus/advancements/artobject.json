@@ -1,0 +1,38 @@
+{
+  "display": {
+    "icon": {
+      "item": "minecraft:quartz_block",
+      "data": 2
+    },
+    "title": {
+      "translate": "advancements.artobject.title"
+    },
+    "description": {
+      "translate": "advancements.artobject.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "artobject": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "minecraft:painting",
+            "count": {
+              "min": 1,
+              "max": 9999999
+            }
+          }
+        ]
+      }
+    }
+  },
+  "rewards": {
+    "experience": 1
+  },
+  "parent": "variousachievementsplus:proplogicadvanc"
+}

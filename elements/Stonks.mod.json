@@ -1,0 +1,25 @@
+{
+  "_fv": 6,
+  "_type": "achievement",
+  "definition": {
+    "achievementName": "Stonks",
+    "achievementDescription": "Get 1 stack Emerald Block",
+    "achievementIcon": {
+      "value": "Items.EMERALD"
+    },
+    "background": "Default",
+    "disableDisplay": false,
+    "showPopup": true,
+    "announceToChat": true,
+    "hideIfNotCompleted": false,
+    "rewardLoot": [],
+    "rewardRecipes": [],
+    "rewardFunction": "No function",
+    "rewardXP": 1,
+    "achievementType": "challenge",
+    "parent": {
+      "value": "CUSTOM:PropLogicAdvanc"
+    },
+    "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"item_in_inventory\" x=\"13\" y=\"24\"><value name=\"amount_l\"><block type=\"math_number\"><field name=\"NUM\">64</field></block></value><value name=\"amount_h\"><block type=\"math_number\"><field name=\"NUM\">99999999</field></block></value><value name=\"item\"><block type=\"mcitem_all\"><field name=\"value\">Blocks.EMERALD_BLOCK</field></block></value><next><block type=\"advancement_trigger\" deletable=\"false\"/></next></block></xml>"
+  }
+}

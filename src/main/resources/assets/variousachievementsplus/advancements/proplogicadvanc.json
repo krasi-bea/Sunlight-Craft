@@ -1,0 +1,26 @@
+{
+  "display": {
+    "background": "variousachievementsplus:textures/logo.png",
+    "icon": {
+      "item": "variousachievementsplus:logo"
+    },
+    "title": {
+      "translate": "advancements.proplogicadvanc.title"
+    },
+    "description": {
+      "translate": "advancements.proplogicadvanc.descr"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "proplogicadvanc": {
+      "trigger": "minecraft:tick"
+    }
+  },
+  "rewards": {
+    "experience": 1
+  }
+}
