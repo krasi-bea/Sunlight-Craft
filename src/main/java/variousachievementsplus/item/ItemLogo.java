@@ -1,7 +1,7 @@
 
 package variousachievementsplus.item;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.fml.relauncher.Side;
@@ -18,11 +18,11 @@ import net.minecraft.block.state.IBlockState;
 
 import java.util.List;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ItemLogo extends ElementsVariousAchievements.ModElement {
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ItemLogo extends ElementsVariousachievementsplusMod.ModElement {
 	@GameRegistry.ObjectHolder("variousachievementsplus:logo")
 	public static final Item block = null;
-	public ItemLogo(ElementsVariousAchievements instance) {
+	public ItemLogo(ElementsVariousachievementsplusMod instance) {
 		super(instance, 7);
 	}
 

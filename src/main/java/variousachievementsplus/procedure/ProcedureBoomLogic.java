@@ -1,6 +1,6 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -14,13 +14,15 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.command.ICommandSender;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedureBoomLogic extends ElementsVariousAchievements.ModElement {
-	public ProcedureBoomLogic(ElementsVariousAchievements instance) {
+import java.util.Map;
+
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedureBoomLogic extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedureBoomLogic(ElementsVariousachievementsplusMod instance) {
 		super(instance, 25);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
 			System.err.println("Failed to load dependency x for procedure BoomLogic!");
 			return;

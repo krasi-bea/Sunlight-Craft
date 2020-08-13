@@ -1,8 +1,8 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.VariousAchievementsVariables;
+import variousachievementsplus.VariousachievementsplusModVariables;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -10,23 +10,25 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.entity.Entity;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedurePlayerDeScorer extends ElementsVariousAchievements.ModElement {
-	public ProcedurePlayerDeScorer(ElementsVariousAchievements instance) {
+import java.util.Map;
+
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedurePlayerDeScorer extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedurePlayerDeScorer(ElementsVariousachievementsplusMod instance) {
 		super(instance, 27);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure PlayerDeScorer!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		VariousAchievementsVariables.scorePlayers = (double) ((VariousAchievementsVariables.scorePlayers) - 1);
-		if (((VariousAchievementsVariables.scorePlayers) < 0)) {
-			VariousAchievementsVariables.scorePlayers = (double) 1;
+		VariousachievementsplusModVariables.scorePlayers = (double) ((VariousachievementsplusModVariables.scorePlayers) - 1);
+		if (((VariousachievementsplusModVariables.scorePlayers) < 0)) {
+			VariousachievementsplusModVariables.scorePlayers = (double) 1;
 		}
-		System.out.println(((entity) + "" + (" leave world. Now online: ") + "" + ((VariousAchievementsVariables.scorePlayers))));
+		System.out.println(((entity) + "" + (" leave world. Now online: ") + "" + ((VariousachievementsplusModVariables.scorePlayers))));
 	}
 
 	@SubscribeEvent

@@ -1,6 +1,6 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -9,13 +9,15 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.Entity;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedurePlayerJoinDo extends ElementsVariousAchievements.ModElement {
-	public ProcedurePlayerJoinDo(ElementsVariousAchievements instance) {
+import java.util.Map;
+
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedurePlayerJoinDo extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedurePlayerJoinDo(ElementsVariousachievementsplusMod instance) {
 		super(instance, 19);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure PlayerJoinDo!");
 			return;

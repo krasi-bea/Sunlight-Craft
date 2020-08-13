@@ -1,6 +1,6 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -15,21 +15,22 @@ import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import java.util.Map;
 import java.util.Iterator;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedureBackIntroNormalWorld extends ElementsVariousAchievements.ModElement {
-	public ProcedureBackIntroNormalWorld(ElementsVariousAchievements instance) {
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedureBackIntroNormalWorld extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedureBackIntroNormalWorld(ElementsVariousachievementsplusMod instance) {
 		super(instance, 6);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure BackIntroNormalWorld!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((entity.dimension) == -1)) {
+		if (((entity.dimension) == (-1))) {
 			if (entity instanceof EntityPlayerMP) {
 				Advancement _adv = ((MinecraftServer) ((EntityPlayerMP) entity).mcServer).getAdvancementManager()
 						.getAdvancement(new ResourceLocation("variousachievementsplus:backintronether"));

@@ -1,6 +1,6 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -15,15 +15,16 @@ import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import java.util.Map;
 import java.util.Iterator;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedureLogicFirst extends ElementsVariousAchievements.ModElement {
-	public ProcedureLogicFirst(ElementsVariousAchievements instance) {
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedureLogicFirst extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedureLogicFirst(ElementsVariousachievementsplusMod instance) {
 		super(instance, 21);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure LogicFirst!");
 			return;

@@ -1,6 +1,6 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -13,15 +13,16 @@ import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import java.util.Map;
 import java.util.Iterator;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedureRestoringAchivements extends ElementsVariousAchievements.ModElement {
-	public ProcedureRestoringAchivements(ElementsVariousAchievements instance) {
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedureRestoringAchivements extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedureRestoringAchivements(ElementsVariousachievementsplusMod instance) {
 		super(instance, 28);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure RestoringAchivements!");
 			return;
@@ -30,7 +31,7 @@ public class ProcedureRestoringAchivements extends ElementsVariousAchievements.M
 		double SecretScore = 0;
 		double scoreOfRestoringAchievement = 0;
 		String Secret = "";
-		System.out.println((("Checking ") + "" + ((entity.getDisplayName().getFormattedText())) + "" + (" saves achievement...")));
+		System.out.println((("Checking ") + "" + ((entity.getDisplayName().getUnformattedText())) + "" + (" saves achievement...")));
 		if ((!(((entity.getEntityData().getString("vapAchievement"))).equals("0")))) {
 			Secret = (String) (entity.getEntityData().getString("vapAchievement"));
 			if ((new Object() {
@@ -356,11 +357,11 @@ public class ProcedureRestoringAchivements extends ElementsVariousAchievements.M
 				scoreOfRestoringAchievement = (double) ((scoreOfRestoringAchievement) + 1);
 			}
 			System.out.println((("Restored ") + "" + ((scoreOfRestoringAchievement)) + "" + (" achievements of ") + ""
-					+ ((entity.getDisplayName().getFormattedText()))));
+					+ ((entity.getDisplayName().getUnformattedText()))));
 		} else {
 			entity.getEntityData().setString("vapAchievement", "00000000000000");
 			System.out.println(
-					(("No save found for ") + "" + ((entity.getDisplayName().getFormattedText())) + "" + (". Save form created in Data player.")));
+					(("No save found for ") + "" + ((entity.getDisplayName().getUnformattedText())) + "" + (". Save form created in Data player.")));
 		}
 	}
 

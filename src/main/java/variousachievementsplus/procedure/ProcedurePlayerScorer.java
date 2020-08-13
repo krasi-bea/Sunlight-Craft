@@ -1,8 +1,8 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.VariousAchievementsVariables;
+import variousachievementsplus.VariousachievementsplusModVariables;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -10,20 +10,22 @@ import net.minecraftforge.common.MinecraftForge;
 
 import net.minecraft.entity.Entity;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedurePlayerScorer extends ElementsVariousAchievements.ModElement {
-	public ProcedurePlayerScorer(ElementsVariousAchievements instance) {
+import java.util.Map;
+
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedurePlayerScorer extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedurePlayerScorer(ElementsVariousachievementsplusMod instance) {
 		super(instance, 26);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure PlayerScorer!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		VariousAchievementsVariables.scorePlayers = (double) ((VariousAchievementsVariables.scorePlayers) + 1);
-		System.out.println(((entity) + "" + (" join. Now online: ") + "" + ((VariousAchievementsVariables.scorePlayers))));
+		VariousachievementsplusModVariables.scorePlayers = (double) ((VariousachievementsplusModVariables.scorePlayers) + 1);
+		System.out.println(((entity) + "" + (" join. Now online: ") + "" + ((VariousachievementsplusModVariables.scorePlayers))));
 	}
 
 	@SubscribeEvent

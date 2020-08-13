@@ -5,7 +5,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 
-public class ServerProxyVariousAchievements implements IProxyVariousAchievements {
+public class ServerProxyVariousachievementsplusMod implements IProxyVariousachievementsplusMod {
 	@Override
 	public void preInit(FMLPreInitializationEvent event) {
 	}

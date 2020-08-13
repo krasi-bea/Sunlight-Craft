@@ -45,7 +45,7 @@ import java.util.ArrayList;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Retention;
 
-public class ElementsVariousAchievements implements IFuelHandler, IWorldGenerator {
+public class ElementsVariousachievementsplusMod implements IFuelHandler, IWorldGenerator {
 	public final List<ModElement> elements = new ArrayList<>();
 	public final List<Supplier<Block>> blocks = new ArrayList<>();
 	public final List<Supplier<Item>> items = new ArrayList<>();
@@ -53,23 +53,23 @@ public class ElementsVariousAchievements implements IFuelHandler, IWorldGenerato
 	public final List<Supplier<EntityEntry>> entities = new ArrayList<>();
 	public final List<Supplier<Potion>> potions = new ArrayList<>();
 	public static Map<ResourceLocation, net.minecraft.util.SoundEvent> sounds = new HashMap<>();
-	public ElementsVariousAchievements() {
+	public ElementsVariousachievementsplusMod() {
 	}
 
 	public void preInit(FMLPreInitializationEvent event) {
 		try {
 			for (ASMDataTable.ASMData asmData : event.getAsmData().getAll(ModElement.Tag.class.getName())) {
 				Class<?> clazz = Class.forName(asmData.getClassName());
-				if (clazz.getSuperclass() == ElementsVariousAchievements.ModElement.class)
-					elements.add((ElementsVariousAchievements.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
+				if (clazz.getSuperclass() == ElementsVariousachievementsplusMod.ModElement.class)
+					elements.add((ElementsVariousachievementsplusMod.ModElement) clazz.getConstructor(this.getClass()).newInstance(this));
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 		Collections.sort(elements);
-		elements.forEach(ElementsVariousAchievements.ModElement::initElements);
-		this.addNetworkMessage(VariousAchievementsVariables.WorldSavedDataSyncMessageHandler.class,
-				VariousAchievementsVariables.WorldSavedDataSyncMessage.class, Side.SERVER, Side.CLIENT);
+		elements.forEach(ElementsVariousachievementsplusMod.ModElement::initElements);
+		this.addNetworkMessage(VariousachievementsplusModVariables.WorldSavedDataSyncMessageHandler.class,
+				VariousachievementsplusModVariables.WorldSavedDataSyncMessage.class, Side.SERVER, Side.CLIENT);
 	}
 
 	public void registerSounds(RegistryEvent.Register<net.minecraft.util.SoundEvent> event) {
@@ -95,13 +95,13 @@ public class ElementsVariousAchievements implements IFuelHandler, IWorldGenerato
 	@SubscribeEvent
 	public void onPlayerLoggedIn(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent event) {
 		if (!event.player.world.isRemote) {
-			WorldSavedData mapdata = VariousAchievementsVariables.MapVariables.get(event.player.world);
-			WorldSavedData worlddata = VariousAchievementsVariables.WorldVariables.get(event.player.world);
+			WorldSavedData mapdata = VariousachievementsplusModVariables.MapVariables.get(event.player.world);
+			WorldSavedData worlddata = VariousachievementsplusModVariables.WorldVariables.get(event.player.world);
 			if (mapdata != null)
-				VariousAchievements.PACKET_HANDLER.sendTo(new VariousAchievementsVariables.WorldSavedDataSyncMessage(0, mapdata),
+				VariousachievementsplusMod.PACKET_HANDLER.sendTo(new VariousachievementsplusModVariables.WorldSavedDataSyncMessage(0, mapdata),
 						(EntityPlayerMP) event.player);
 			if (worlddata != null)
-				VariousAchievements.PACKET_HANDLER.sendTo(new VariousAchievementsVariables.WorldSavedDataSyncMessage(1, worlddata),
+				VariousachievementsplusMod.PACKET_HANDLER.sendTo(new VariousachievementsplusModVariables.WorldSavedDataSyncMessage(1, worlddata),
 						(EntityPlayerMP) event.player);
 		}
 	}
@@ -109,9 +109,9 @@ public class ElementsVariousAchievements implements IFuelHandler, IWorldGenerato
 	@SubscribeEvent
 	public void onPlayerChangedDimension(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerChangedDimensionEvent event) {
 		if (!event.player.world.isRemote) {
-			WorldSavedData worlddata = VariousAchievementsVariables.WorldVariables.get(event.player.world);
+			WorldSavedData worlddata = VariousachievementsplusModVariables.WorldVariables.get(event.player.world);
 			if (worlddata != null)
-				VariousAchievements.PACKET_HANDLER.sendTo(new VariousAchievementsVariables.WorldSavedDataSyncMessage(1, worlddata),
+				VariousachievementsplusMod.PACKET_HANDLER.sendTo(new VariousachievementsplusModVariables.WorldSavedDataSyncMessage(1, worlddata),
 						(EntityPlayerMP) event.player);
 		}
 	}
@@ -119,7 +119,7 @@ public class ElementsVariousAchievements implements IFuelHandler, IWorldGenerato
 	public <T extends IMessage, V extends IMessage> void addNetworkMessage(Class<? extends IMessageHandler<T, V>> handler, Class<T> messageClass,
 			Side... sides) {
 		for (Side side : sides)
-			VariousAchievements.PACKET_HANDLER.registerMessage(handler, messageClass, messageID, side);
+			VariousachievementsplusMod.PACKET_HANDLER.registerMessage(handler, messageClass, messageID, side);
 		messageID++;
 	}
 	public static class GuiHandler implements IGuiHandler {
@@ -160,9 +160,9 @@ public class ElementsVariousAchievements implements IFuelHandler, IWorldGenerato
 		@Retention(RetentionPolicy.RUNTIME)
 		public @interface Tag {
 		}
-		protected final ElementsVariousAchievements elements;
+		protected final ElementsVariousachievementsplusMod elements;
 		protected final int sortid;
-		public ModElement(ElementsVariousAchievements elements, int sortid) {
+		public ModElement(ElementsVariousachievementsplusMod elements, int sortid) {
 			this.elements = elements;
 			this.sortid = sortid;
 		}

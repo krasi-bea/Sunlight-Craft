@@ -1,8 +1,8 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.VariousAchievementsVariables;
+import variousachievementsplus.VariousachievementsplusModVariables;
 
-import variousachievementsplus.ElementsVariousAchievements;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
@@ -17,21 +17,22 @@ import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import java.util.Map;
 import java.util.Iterator;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedureLogicAlone extends ElementsVariousAchievements.ModElement {
-	public ProcedureLogicAlone(ElementsVariousAchievements instance) {
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedureLogicAlone extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedureLogicAlone(ElementsVariousachievementsplusMod instance) {
 		super(instance, 18);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure LogicAlone!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
-		if (((VariousAchievementsVariables.scorePlayers) == 1)) {
+		if (((VariousachievementsplusModVariables.scorePlayers) == 1)) {
 			entity.getEntityData().setDouble("aloneMessages", ((entity.getEntityData().getDouble("aloneMessages")) + 1));
 			System.out.println(
 					(("Alone Messages of ") + "" + (entity) + "" + (" now is ") + "" + ((entity.getEntityData().getDouble("aloneMessages")))));

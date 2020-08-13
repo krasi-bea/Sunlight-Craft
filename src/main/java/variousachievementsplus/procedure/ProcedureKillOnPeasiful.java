@@ -1,11 +1,6 @@
 package variousachievementsplus.procedure;
 
-import variousachievementsplus.ElementsVariousAchievements;
-
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
-import net.minecraftforge.event.entity.living.LivingDeathEvent;
-import net.minecraftforge.common.MinecraftForge;
+import variousachievementsplus.ElementsVariousachievementsplusMod;
 
 import net.minecraft.world.World;
 import net.minecraft.world.EnumDifficulty;
@@ -16,15 +11,16 @@ import net.minecraft.entity.Entity;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import java.util.Map;
 import java.util.Iterator;
 
-@ElementsVariousAchievements.ModElement.Tag
-public class ProcedureKillOnPeasiful extends ElementsVariousAchievements.ModElement {
-	public ProcedureKillOnPeasiful(ElementsVariousAchievements instance) {
+@ElementsVariousachievementsplusMod.ModElement.Tag
+public class ProcedureKillOnPeasiful extends ElementsVariousachievementsplusMod.ModElement {
+	public ProcedureKillOnPeasiful(ElementsVariousachievementsplusMod instance) {
 		super(instance, 4);
 	}
 
-	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
+	public static void executeProcedure(Map<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
 			System.err.println("Failed to load dependency entity for procedure KillOnPeasiful!");
 			return;
@@ -51,29 +47,5 @@ public class ProcedureKillOnPeasiful extends ElementsVariousAchievements.ModElem
 			entity.getEntityData().setString("vapAchievement", ((((entity.getEntityData().getString("vapAchievement")).substring((int) 0, (int) 0)))
 					+ "" + (1) + "" + (((entity.getEntityData().getString("vapAchievement")).substring((int) 2, (int) 13)))));
 		}
-	}
-
-	@SubscribeEvent
-	public void onEntityDeath(LivingDeathEvent event) {
-		if (event != null && event.getSource() != null && event.getSource().getTrueSource() != null) {
-			Entity entity = event.getSource().getTrueSource();
-			int i = (int) entity.posX;
-			int j = (int) entity.posY;
-			int k = (int) entity.posZ;
-			World world = entity.world;
-			java.util.HashMap<String, Object> dependencies = new java.util.HashMap<>();
-			dependencies.put("x", i);
-			dependencies.put("y", j);
-			dependencies.put("z", k);
-			dependencies.put("world", world);
-			dependencies.put("entity", entity);
-			dependencies.put("event", event);
-			this.executeProcedure(dependencies);
-		}
-	}
-
-	@Override
-	public void preInit(FMLPreInitializationEvent event) {
-		MinecraftForge.EVENT_BUS.register(this);
 	}
 }
