@@ -48,6 +48,8 @@ public class ProcedureKillOnPeasiful extends ElementsVariousAchievements.ModElem
 					}
 				}
 			}
+			entity.getEntityData().setString("vapAchievement", ((((entity.getEntityData().getString("vapAchievement")).substring((int) 0, (int) 0)))
+					+ "" + (1) + "" + (((entity.getEntityData().getString("vapAchievement")).substring((int) 2, (int) 13)))));
 		}
 	}
 
