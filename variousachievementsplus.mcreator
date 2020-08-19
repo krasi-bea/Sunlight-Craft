@@ -324,6 +324,15 @@
           }
         ]
       }
+    },
+    {
+      "name": "RestoreAchievements",
+      "type": "command",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "restore_achievements"
     }
   ],
   "variable_elements": [
@@ -379,8 +388,8 @@
       "advancements.timetogriffing.title": "TIME TO GRIFFING!",
       "advancements.artobject.descr": "Get Painting",
       "advancements.alone.descr": "Sand 100 messages",
-      "advancements.regularsuicide.title": "Regular Suicide",
       "advancements.proplogicadvanc.title": "Various Achivenent +",
+      "advancements.regularsuicide.title": "Regular Suicide",
       "advancements.basisofmechanic.descr": "Get Piston",
       "advancements.backintronether.title": "Home, Lovely home!",
       "advancements.artobject.title": "Art Object",
@@ -400,13 +409,13 @@
       "advancements.wtfyoudoing.title": "Killer",
       "advancements.backintronether.descr": "Back to Surface",
       "advancements.wtfyoudoing.descr": "Kill any Mob on Peasiful difficulty",
-      "advancements.start.title": "Я здесь!",
-      "advancements.start.descr": "Напишите что-нибудь в чат",
+      "advancements.start.title": "I\u0027m here!",
+      "advancements.start.descr": "Write w/n in chat",
       "advancements.breakmecompletely.title": "Break me completely",
       "advancements.justincase.descr": "Get 64 sticks",
       "advancements.regularsuicide.descr": "Death 100 times",
       "advancements.stonks.descr": "Get 1 stack Emerald Block",
-      "advancements.justincase.title": "Just in case (not work)"
+      "advancements.justincase.title": "Just in case."
     }
   },
   "workspaceSettings": {
